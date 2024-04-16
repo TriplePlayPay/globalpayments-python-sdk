@@ -13,12 +13,16 @@ setup(
     author='Heartland Payment Systems',
     author_email='EntApp_DevPortal@e-hps.com',
     packages=[
-        'globalpayments', 'globalpayments.api', 'globalpayments.api.builders',
-        'globalpayments.api.builders.validations',
-        'globalpayments.api.entities',
-        'globalpayments.api.entities.table_service',
-        'globalpayments.api.gateways', 'globalpayments.api.payment_methods',
-        'globalpayments.api.services', 'globalpayments.api.utils'
+        'python_sdk.globalpayments',
+        'python_sdk.globalpayments.api',
+        'python_sdk.globalpayments.api.builders',
+        'python_sdk.globalpayments.api.builders.validations',
+        'python_sdk.globalpayments.api.entities',
+        'python_sdk.globalpayments.api.entities.table_service',
+        'python_sdk.globalpayments.api.gateways',
+        'python_sdk.globalpayments.api.payment_methods',
+        'python_sdk.globalpayments.api.services',
+        'python_sdk.globalpayments.api.utils'
     ],
     scripts=[],
     url='https://developer.heartlandpaymentsystems.com/',
@@ -27,6 +31,6 @@ setup(
     long_description=open('README.txt').read(),
     install_requires=[
         'xmltodict >= 0.9.0', 'jsonpickle >= 0.6.1', 'enum34 >= 1.1.6',
-        'urllib3[secure] >= 1.18', 'certifi >= 2016.9.26',
+        'urllib3[secure] >= 1.18, <2', 'certifi >= 2016.9.26',
         'pyopenssl >= 17.5.0'
     ])
