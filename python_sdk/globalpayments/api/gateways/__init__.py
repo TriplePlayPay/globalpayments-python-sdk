@@ -6,7 +6,7 @@ import xml.etree.cElementTree as et
 import re
 import certifi
 import jsonpickle
-import urllib3.contrib.pyopenssl
+import urllib3
 import xmltodict
 import python_sdk.globalpayments as gp
 import datetime
@@ -55,7 +55,6 @@ from python_sdk.globalpayments.api.payment_methods import (
 )
 from python_sdk.globalpayments.api.utils import GenerationUtils
 
-urllib3.contrib.pyopenssl.inject_into_urllib3()
 HTTP = urllib3.PoolManager(cert_reqs="CERT_REQUIRED", ca_certs=certifi.where())
 
 
